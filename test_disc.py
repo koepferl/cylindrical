@@ -18,16 +18,16 @@ disk.h_0 = 5 * au                   # Disk scaleheight at r_0
 disk.p = -1                         # Radial surface density exponent
 disk.beta = 1.25                    # Disk flaring power
 
-envelope = m.add_power_law_envelope()
-envelope.mass = 0.001 * msun          # Envelope mass
-envelope.rmin = au                  # Inner radius
-envelope.rmax = 10000 * au          # Outer radius
-envelope.power = -2                 # Radial power
-envelope.r_0 = au                   # Inner density radius
+#envelope = m.add_power_law_envelope()
+#envelope.mass = 0.001 * msun          # Envelope mass
+#envelope.rmin = au                  # Inner radius
+#envelope.rmax = 10000 * au          # Outer radius
+#envelope.power = -2                 # Radial power
+#envelope.r_0 = au                   # Inner density radius
 
 #dust
 disk.dust = 'www003.hdf5'
-envelope.dust = 'kmh.hdf5'
+#envelope.dust = 'kmh.hdf5'
 #cavity.dust = 'kmh_hdf5'
 
 #coordinates
