@@ -28,7 +28,7 @@ ax.set_ylabel(r'$\lambda F_\lambda$ [ergs/s/cm$^2$]')
 
 # Set view limits
 ax.set_xlim(0.1, 5000.)
-ax.set_ylim(1.e-12, 2.e-6)
+ax.set_ylim(1.e-15, 2.e-10)
 
 # Write out the plot
 fig.savefig('sed.png')

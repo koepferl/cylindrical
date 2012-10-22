@@ -11,22 +11,22 @@ m = ModelOutput('test_disc.rtout')
 g = m.get_quantities()
 
 # Get the wall positions for r and theta
-rw, tw = g.r_wall / au, g.t_wall
+rw, zw = g.w_wall / au, g.z_wall / au
 
-print rw, tw
+print rw, zw
 
 # Make a 2-d grid of the wall positions (used by pcolormesh)
-R, T = np.meshgrid(rw, tw)
+R, Z = np.meshgrid(rw, zw)
 
 # Make a plot in (r, theta) space
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
-c = ax.pcolormesh(R, T, g['temperature'][0].array[0, :, :],vmin=0, vmax=100)
+c = ax.pcolormesh(R, Z, g['temperature'][0].array[0, :, :],vmin=0, vmax=100)
 ax.set_xscale('log')
 ax.set_xlim(rw[1], rw[-1])
-ax.set_ylim(tw[0], tw[-1])
+ax.set_ylim(zw[0], zw[-1])
 ax.set_xlabel('r (au)')
-ax.set_ylabel(r'$\theta$')
+ax.set_ylabel('z')
 ax.set_yticks([np.pi, np.pi*0.75, np.pi * 0.5, np.pi * 0.25, 0.])
 ax.set_yticklabels([r'$\pi$', r'$3\pi/4$', r'$\pi/2$',r'$\pi/4$', r'$0$'])
 cb = fig.colorbar(c)
