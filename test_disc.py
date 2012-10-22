@@ -31,11 +31,10 @@ envelope.dust = 'kmh.hdf5'
 #cavity.dust = 'kmh_hdf5'
 
 #coordinates
-n_r = 200
-n_theta = 200
+n_w = 200
+n_z = 200
 n_phi = 1
-m.set_spherical_polar_grid_auto(n_r, n_theta, n_phi)
-
+m.set_cylindrical_polar_grid_auto(n_w, n_z, n_phi)
 
 #viewing angles
 image = m.add_peeled_images(image=False)
