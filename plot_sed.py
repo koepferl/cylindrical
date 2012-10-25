@@ -16,7 +16,7 @@ ax = fig.add_subplot(1, 1, 1)
 # scale to 300pc. In Python, negative indices can be used for lists and
 # arrays, and indicate the position from the end. So to get the SED in the
 # largest aperture, we set aperture=-1.
-wav, nufnu = m.get_sed(inclination=9, aperture=-1, distance=300 * pc)
+wav, nufnu = m.get_sed(inclination=0, aperture=-1, distance=300 * pc)
 
 # Plot the SED. The loglog command is similar to plot, but automatically
 # sets the x and y axes to be on a log scale.
